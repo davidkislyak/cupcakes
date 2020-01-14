@@ -12,3 +12,19 @@
 
         return $return;
     }
+
+    function arrToList($arr, $valid) {
+        $return = '<ul>';
+
+        foreach ($arr as $key) {
+            if (isset($valid[$key])) {
+                $return .= "<li>$valid[$key]</li>";
+            } else {
+                return false;
+            }
+        }
+
+        $return .= '</ul>';
+
+        return $return;
+    }
